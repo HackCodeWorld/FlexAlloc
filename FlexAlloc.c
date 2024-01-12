@@ -7,12 +7,8 @@
 #include <string.h>
 #include "FlexAlloc.h"
 
-
-
 #define SIZE 100000
 int myArray[SIZE];  // global array of 100,000 integers
-
-
 
 /*
  * This structure serves as the header for each allocated and free block.

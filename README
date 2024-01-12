@@ -1,17 +1,38 @@
 README: FlexAlloc Dynamic Memory Allocator
 
-### Provided Files
-README   link to project page and info about other files
-Makefile used by make to build a shared object file needed for testing
-FlexAlloc.h header file with the signatures for public "shared" functions
-FlexAlloc.c source code with functions completed
+### UNDER DEVELOPMENT (STAY TUNED) ...
 
-### To build FlexAlloc object file:
-COMPILE  make         (this will build FlexAlloc.o and libheap.so)
+### Project Background:
+A custom memory allocator was developed to improve the memory management efficiency of internal enterprise applications.
+The project aims to optimize program performance through underlying memory management techniques.
 
-### To test heap functions:
-cd tests              (change to the tests sub-directory)
-make                  (compiles all tests and runs test_align1)
-make partA            (runs the tests that only require balloc works)
-make partB            (runs the tests that require balloc and bfree)
-make partC            (runs the tests that require balloc, bfree with immediate coalescing)
+### Expected Functions:
+(1) Implement thread local storage to reduce memory allocation contention
+(2) Efficiently manage the free list with block size based separated free list strategy
+(3) Implement memory fragmentation reduction strategy
+(4) Memory usage statistics function development
+(5) Support concurrent allocation and release safety mechanism.
+
+### Expected Goal
+1. the optimized memory allocator shows efficient resource management capabilities
+in memory constrained environments, reducing overall system resource consumption.
+2. This project demonstrates the potential for efficient memory management with
+limited resources while maintaining code simplicity and maintainability.
+
+### Project Architect
+
+FlexAlloc
+├── ThreadLocalStorage
+│   └── Implementation of thread-local storage to reduce memory allocation contention
+│
+├── FreeListManagement
+│   └── Implementation of segregated free list strategy based on block sizes
+│
+├── FragmentationReduction
+│   └── Strategies and algorithms to reduce memory fragmentation
+│
+├── MemoryUsageStatistics
+│   └── Development of features for tracking and reporting memory usage
+│
+└── ConcurrencySupport
+    └── Safe mechanisms for concurrent allocation and deallocation
